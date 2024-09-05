@@ -24,25 +24,6 @@
             </div>
         </nav>
         <main class="flex-grow xl:flex-grow-0 xl:bg-[#ffffff7e] xl:m-auto xl:w-[95%] xl:h-[85%] xl:rounded-3xl">
-            <h1 class="text-2xl text-center mt-[50px]">Plataforma de gestión de vacunas colombianas.</h1>
-            <img src="./img/enfermera.png" class="w-[80%] m-auto" alt="">
-            <a href="#" class=""><button class="p-3 font-medium bg-[#3f3f3f] rounded-xl text-white text-2xl pl-[10%] pr-[10%] ml-[20%] mt-[10%]">¡Entrar ahora!</button></a>
-        </main>
-        <footer class="h-[20vh] w-[100%] bg-gradient-to-b from-[#57005480] to-[#00000081] mt-auto flex flex-wrap text-white xl:hidden">
-            <span class="h-fit mt-[15px] ml-[13%] items-center">Derechos reservados VacunaCol &copy 2024</span>
-            <div class="w-[50%] h-fit text-justify">
-            <a href="" class="underline">Preguntas frecuentes</a>
-            <br>
-            <a href="" class="underline">Términos y condiciones</a>
-            <br>
-            <img src="./img/insts.png" alt="" class="w-[35%] mt-[5%]">
-        </div>
-        <div class="w-[50%] h-fit">
-            <a href="#">Dirección: </a>
-            <br>
-            <a href="#">Teléfono: </a>
-        </div>
-        </footer>
-    </div>
-</body>
-</html>
+            <div class="rounded-xl bg-[#4C4276] w-[80%] m-auto h-fit text-center p-1 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px]">
+                <h1 id="titulo" class="text-xl text-white font-medium">Título</h1>
+            </div>
