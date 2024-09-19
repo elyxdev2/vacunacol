@@ -25,8 +25,17 @@
         </nav>
         <main class="flex-grow xl:flex-grow-0 xl:bg-[#ffffff7e] xl:m-auto xl:w-[95%] xl:h-[85%] xl:rounded-3xl">
             <div class="rounded-xl bg-[#4C4276] w-[80%] m-auto h-fit text-center p-1 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px]">
-                <h1 id="titulo" class="text-xl text-white font-medium">Título</h1>
+                <h1 id="titulo" class="text-xl text-white font-medium">Preguntas Frecuentes</h1>
             </div>
+            <div class="xl:hidden">
+            <a href="#" class=""><div class="text-center"><button class="rounded-3xl bg-[#9688ce] w-[75%] m-auto h-fit text-center p-3 mt-[60px] xl:w-fit xl:pl-[10px] xl:pr-[10px] text-white">¡Entrar ahora!</button></div></a>
+            <a href="#" class=""><div class="text-center"><button class="rounded-3xl bg-[#9688ce] w-[75%] m-auto h-fit text-center p-3 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px] text-white">¡Entrar ahora!</button></div></a>
+            <a href="#" class=""><div class="text-center"><button class="rounded-3xl bg-[#9688ce] w-[75%] m-auto h-fit text-center p-3 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px] text-white">¡Entrar ahora!</button></div></a>
+            <a href="#" class=""><div class="text-center"><button class="rounded-3xl bg-[#9688ce] w-[75%] m-auto h-fit text-center p-3 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px] text-white">¡Entrar ahora!</button></div></a>
+            <a href="#" class=""><div class="text-center"><button class="rounded-3xl bg-[#9688ce] w-[75%] m-auto h-fit text-center p-3 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px] text-white">¡Entrar ahora!</button></div></a>
+            <a href="#" class=""><div class="text-center"><button class="rounded-3xl bg-[#9688ce] w-[75%] m-auto h-fit text-center p-3 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px] text-white">¡Entrar ahora!</button></div></a>
+        </div>
+        
         </main>
         <footer class="h-[20vh] w-[100%] bg-gradient-to-b from-[#57005480] to-[#00000081] mt-auto flex flex-wrap text-white xl:hidden">
             <span class="h-fit mt-[15px] ml-[13%] items-center">Derechos reservados VacunaCol &copy 2024</span>
