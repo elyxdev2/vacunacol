@@ -8,6 +8,6 @@ $d_pswd = "";
 $d_db = ""; // por definir
 
 // Rutas
-$rp = 'http://localhost/'; // cambiar - rutas para archivos
+$rp = 'http://192.168.1.2/'; // cambiar - rutas para archivos
 $r_static = $rp . "static";
 $r_auth = $rp . "auth";

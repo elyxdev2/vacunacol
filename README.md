@@ -2,13 +2,13 @@
 
 Proyecto de Media Técnica - Pascual Bravo
 
-> Integrantes
+### Integrantes
 
 - Yosman R.
 - Juan M.
 - Deiby B.
 
-### TO-DO
+> TO-DO
 
 - [ ] Terminar vistas para móvil
 - [ ] Hacer responsive todo el front-end
