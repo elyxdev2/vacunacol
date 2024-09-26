@@ -8,6 +8,7 @@ if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['logged'])) {
         echo "
         <h1 class='text-2xl font-bold text-center mt-[50%]'>Sesión cerrada!</h1>
         <p class='text-lg font-semibold text-center'>Regresando al inicio en 3 segundos...</p>
+        <script>setTimeout(function(){window.location.replace('$r_base');}, 3000)</script>
         ";
     }
 } else {

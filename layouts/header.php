@@ -37,11 +37,36 @@ if (file_exists($possible_core_route_a)) {
         </div>
         <nav id="menu" class="fixed z-50 left-[45%] top-[7%] w-[50%] bg-zinc-700 p-2 rounded-xl text-white text-center menu-hidden">
           <ul class="text-black">
-            <li class="rounded-2xl bg-gray-300 mb-[8px] p-1"><a href="<?php echo $r_base?>">Inicio</a></li>
-            <li class="rounded-2xl bg-gray-300 mb-[8px] p-1"><a href="<?php echo $r_base?>tyc">Términos y condiciones</a></li>
-            <li class="rounded-2xl bg-gray-300 mb-[8px] p-1"><a href="<?php echo $r_base?>faq">Preguntas frecuentes</a></li>
-            <li class="rounded-2xl bg-gray-300 mb-[16px] p-1"><a href="<?php echo $r_base?>sobre_nosotros">Sobre nosotros</a></li>
-            <li class="rounded-2xl bg-gradient-to-r from-[#C100BA] to-[#16009F] text-white font-semibold p-1"><a href="<?php echo $r_auth?>/login">Iniciar sesión</a></li>
+          <?php 
+          $lg_in = false;
+          if (isset($_SESSION['logged'])) {
+            if ($_SESSION['logged'] == true) {
+              $lg_in = true;
+            } else {
+              $lg_in = false;
+            }
+          } else {
+            $lg_in = false;
+          }
+          if ($lg_in == false) { // Sesión NO iniciada
+            echo "
+            <a href='$r_auth/login'><li class='rounded-2xl bg-gradient-to-r from-[#C100BA] to-[#16009F] mb-[16px] text-white font-bold p-1'>Iniciar sesión</li></a>
+            <a href='$r_base'><li class='rounded-2xl bg-gray-300 mb-[8px] p-1'>Inicio</li></a>
+            <a href='$r_base/tyc'><li class='rounded-2xl bg-gray-300 mb-[8px] p-1'>Términos y condiciones</li></a>
+            <a href='$r_base/faq'><li class='rounded-2xl bg-gray-300 mb-[8px] p-1'>Preguntas frecuentes</li></a>
+            <a href='$r_base/sobre_nosotros'><li class='rounded-2xl bg-gray-300 p-1'>Sobre nosotros</li></a>
+            ";
+          } else { // Sesión iniciada
+            echo "
+            <a href='$r_auth/logout'><li class='rounded-2xl bg-gradient-to-r from-[#C10000] to-[#9F7C00] mb-[16px] text-white font-bold p-1'>Cerrar sesión</li></a>
+            <a href='$r_base/inicio'><li class='rounded-2xl bg-gray-300 mb-[8px] p-1'>Inicio</li></a>
+            <a href='$r_vacunas/'><li class='rounded-2xl bg-gray-300 mb-[8px] p-1'>Ver registros</li></a>
+            <a href='$r_vacunas/registrar'><li class='rounded-2xl bg-gray-300 mb-[8px] p-1'>Crear registro</li></a>
+            <a href='$r_base/yo'><li class='rounded-2xl bg-gray-300 p-1'>Editar perfil</li></a>
+            ";
+          }
+          ?>
+
           </ul>
         </nav>
         <main class="flex-grow xl:flex-grow-0 xl:bg-[#ffffff7e] xl:m-auto xl:w-[100%] xl:h-[85%] xl:rounded-3xl">

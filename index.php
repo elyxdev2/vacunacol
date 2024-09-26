@@ -1,5 +1,11 @@
 <?php
 require_once 'layouts/header.php';
+if (isset($_SESSION["logged"])) {
+    if ($_SESSION['logged'] == true) {
+        header("Location: inicio");
+        exit();
+    }
+}
 ?>
 
 <h1 class="text-2xl text-center mt-[50px]">Plataforma de gestión de vacunas colombianas.</h1>

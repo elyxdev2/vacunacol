@@ -1,4 +1,15 @@
-<?php 
+<?php
+
+session_start();
+
+// TEMPORAL ======================================
+$_SESSION['logged'] = true;
+$_SESSION['user_name'] = "1011397353";
+$_SESSION['user_nick'] = "Prueba";
+header("Location: ../inicio");
+exit();
+// TEMPORAL ======================================  
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     exit();
 }

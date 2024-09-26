@@ -12,7 +12,7 @@ if (!isset($_SESSION["logged"])) {
     }
 ?>
         <div class="">
-                <h1 id="titulo" class=" text-center text-3xl text-black mt-[60px]">!Hola [NOMBRE]!</h1>
+                <h1 id="titulo" class=" text-center text-3xl text-black mt-[60px]">!Hola <?php echo $_SESSION['user_nick'] ?>!</h1>
                 <br>
                 <h1 class="text-2xl text-center">Es bueno verte otra vez. Acá hay algunas cosas que puedes hacer</h1>
             </div>

@@ -1,9 +1,12 @@
 <?php
-require_once '../layouts/header.php';
-if (isset($_SESSION["logged"])) {
-    if ($_SESSION['logged'] == true) {
-        header("Location: ../inicio");
-        exit();
+require_once 'layouts/header.php';
+if (!isset($_SESSION["logged"])) {
+    header("Location: auth/login");
+    exit();
+} else {
+    if ($_SESSION["logged"] != true) {
+        header("Location: auth/login");
+        exit(); 
     }
 }
 ?>
@@ -51,5 +54,5 @@ if (isset($_SESSION["logged"])) {
             <!--</form>-->
 
 <?php
-require_once '../layouts/footer.php';
+require_once 'layouts/footer.php';
 ?>
