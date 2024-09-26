@@ -1,13 +1,10 @@
 <?php
 // Archivo usado para declarar rutas globales y configuraciones
 
-// Credenciales de la base de datos
-$d_host = "localhost";
-$d_usuario = "root";
-$d_pswd = "";
-$d_db = ""; // por definir
+# Start de la sesión
+session_start();
 
 // Rutas
-$rp = 'http://192.168.1.2/'; // cambiar - rutas para archivos
-$r_static = $rp . "static";
-$r_auth = $rp . "auth";
+$r_base = 'http://192.168.1.2/'; // cambiar - rutas para archivos
+$r_static = $r_base . "static";
+$r_auth = $r_base . "auth";

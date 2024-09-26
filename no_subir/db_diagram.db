@@ -1,0 +1,23 @@
+Table usuarios {
+ id integer [pk, increment]
+ nombres varchar(20) [not null]
+ apellidos varchar(20) [not null]
+ identificacion varchar(12) [not null]
+ correo varchar(320) [not null]
+ contrasena varchar(320) [not null]
+ genero char [not null]
+ foto image
+}
+Table vacunas {
+ id integer [pk, increment]
+ id_usuario integer [not null]
+ fecha date [not null]
+ nombre_vacuna varchar(30) [not null]
+ dosis_necesarias integer [not null]
+ dosis_aplicadas integer [not null]
+ entidad_oficial bool [not null]
+ descripcion text [not null]
+ lugar text
+}
+
+Ref: "usuarios"."id" < "vacunas"."id_usuario"

@@ -9,6 +9,7 @@ require_once '../layouts/header.php';
                 <div class="flex w-[100%] h-[85%] pt-[10%]">
                     <!-- Lado izquierdo-->
                     <div class="w-[50%] h-[80%] p-1 text-center border-r-2 border-r-gray-400">
+                        <input type="hidden" name="accion" value="register">
                         <!-- Nombre completo-->
                         <label for="nombre" class="font-semibold">Nombre completo:</label>
                         <input type="text" id="nombre" placeholder="Ej: José Arcila Perez" class="mb-[12%] bg-gray-300 p-2 rounded-lg text-black">
@@ -18,9 +19,9 @@ require_once '../layouts/header.php';
                         <!-- Correo electrónico -->
                         <label for="email" class="font-semibold">Correo electrónico:</label>
                         <input type="text" id="email" placeholder="Ej: josearcilap@gmail.com" class="mb-[12%] bg-gray-300 p-2 rounded-lg text-black" autocomplete="email">
-                        <!-- Departamento -->
-                        <label for="departamento" class="font-semibold">Departamento:</label>
-                        <input type="text" id="departamento" placeholder="Ej: Antioquia" class="mb-[12%] bg-gray-300 p-2 rounded-lg text-black">
+                        <!-- Ciudad -->
+                        <label for="ciudad" class="font-semibold">Ciudad:</label>
+                        <input type="text" id="ciudad" placeholder="Ej: Medellín" class="mb-[12%] bg-gray-300 p-2 rounded-lg text-black">
                         <!-- EPS -->
                         <label for="eps" class="font-semibold">EPS:</label>
                         <input type="text" id="eps" placeholder="Ej: Sura" class="mb-[12%] bg-gray-300 p-2 rounded-lg text-black">
@@ -32,12 +33,12 @@ require_once '../layouts/header.php';
                         <button class="w-[80px] h-fit rounded-2xl text-sm  text-white bg-gray-500">Subir</button>
                         <button class="w-[80px] h-fit rounded-2xl text-sm  text-white bg-gray-500">Borrar</button>
                         <br>
-                        <!-- Ciudad -->
+                        <!-- Contraseña -->
                         <div class="mt-[20%]">
-                            <label for="ciudad" class="font-semibold">Ciudad:</label>
-                            <input type="text" id="ciudad" placeholder="Ej: Medellín" class="mb-[23%] bg-gray-300 p-2 rounded-lg text-black">
+                            <label for="contrasena" class="font-semibold">Contraseña:</label>
+                            <input type="password" id="contrasena" placeholder="¡No la compartas!" class="mb-[23%] bg-gray-300 p-2 rounded-lg text-black">
                             <!-- Registrarse -->
-                            <!-- Temporal eliminar <a> --><a href="/inicio"><input type="submit" value="¡Regístrate!" placeholder="Ej: Medellín" class="mb-[12%] w-[98%] bg-zinc-700 p-2 font-normal rounded-lg text-white"></a>
+                            <!-- Temporal eliminar <a> --><a href="/inicio"><input type="submit" value="¡Regístrate!" class="mb-[12%] w-[98%] bg-zinc-700 p-2 font-normal rounded-lg text-white"></a>
                         </div>
                     </div>
                 </div>
