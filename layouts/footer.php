@@ -15,5 +15,6 @@
         </footer>
     </div>
     <script src="<?php echo $r_static?>/js/menu.js"></script>
+    <script src="<?php echo $r_static?>/js/utilidades.js"></script>
 </body>
 </html>

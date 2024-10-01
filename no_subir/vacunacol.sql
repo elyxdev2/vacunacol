@@ -6,7 +6,7 @@ CREATE TABLE `usuarios` (
   `correo` varchar(320) NOT NULL,
   `contrasena` varchar(320) NOT NULL,
   `genero` char NOT NULL,
-  `foto` image
+  `foto` varchar(100)
 );
 
 CREATE TABLE `vacunas` (

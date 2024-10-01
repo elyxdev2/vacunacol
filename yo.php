@@ -12,7 +12,7 @@ if (!isset($_SESSION["logged"])) {
 ?>
 
             <div class="rounded-xl bg-[#4C4276] w-[80%] m-auto h-fit text-center p-1 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px]">
-                <h1 id="titulo" class="text-xl text-white font-medium">¡Regístrate!</h1>
+                <h1 id="titulo" class="text-xl text-white font-medium">Editar perfil</h1>
             </div>
             <!--<form action="#">-->
                 <div class="flex w-[100%] h-[85%] pt-[10%]">
@@ -47,7 +47,7 @@ if (!isset($_SESSION["logged"])) {
                             <label for="contrasena" class="font-semibold">Contraseña:</label>
                             <input type="password" id="contrasena" placeholder="¡No la compartas!" class="mb-[23%] bg-gray-300 p-2 rounded-lg text-black">
                             <!-- Registrarse -->
-                            <!-- Temporal eliminar <a> --><a href="auth"><input type="submit" value="¡Regístrate!" class="mb-[12%] w-[98%] bg-zinc-700 p-2 font-normal rounded-lg text-white"></a>
+                            <!-- Temporal eliminar <a> --><a href="auth"><input type="submit" value="¡Guardar!" class="mb-[12%] w-[98%] bg-green-700 p-2 font-normal rounded-lg text-white"></a>
                         </div>
                     </div>
                 </div>
