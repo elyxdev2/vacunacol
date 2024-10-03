@@ -17,8 +17,8 @@ CREATE TABLE `vacunas` (
   `dosis_necesarias` integer NOT NULL,
   `dosis_aplicadas` integer NOT NULL,
   `entidad_oficial` bool NOT NULL,
-  `descripcion` text NOT NULL,
-  `lugar` text
+  `lugar` text NOT NULL,
+  `descripcion` text
 );
 
 ALTER TABLE `vacunas` ADD FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);

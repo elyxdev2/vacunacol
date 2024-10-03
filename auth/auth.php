@@ -12,6 +12,7 @@ if (!isset($_POST['accion'])) {
 }
 
 // Si es post y hay acción a realizar se importa la conexión a la base de datos
+session_start();
 include '../utils/connect.php';
 
 if ($_POST['accion'] == "login") {
@@ -38,6 +39,7 @@ if ($_POST['accion'] == "login") {
     if (password_verify($password, $user['contrasena'])) {
         // Contraseña correcta: guardar datos en la sesión
         $_SESSION['logged'] = True;
+        $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['identificacion'];
         $_SESSION['user_nick'] = $user['nombres'];
         header("Location: ../inicio");
@@ -57,12 +59,67 @@ if ($_POST['accion'] == "login") {
 } elseif ($_POST['accion'] == "register") {
     // Si no están los datos necesarios se devuelve
     
+    /* db
+nombres - nombres
+apellidos - apellidos
+identificacion - numero id
+correo - correo
+genero - sexo
+password- contraseña    
+foto - foto
+    */
 
-    if (!isset($_POST['nombre']) || !isset($_POST['identificacion']) || !isset($_POST['correo']) || !isset($_POST['ciudad']) || !isset($_POST['eps']) || !isset($_POST['foto']) || !isset($_POST['password'])) {
-        header("Location: register");
+    // Validar
+    if (!isset($_POST['nombres']) || !isset($_POST['apellidos']) || !isset($_POST['identificacion']) || !isset($_POST['correo']) || !isset($_POST['genero']) || !isset($_POST['password'])) {
+        echo "Error not isset";
+        //header("Location: register");
+        exit();
+    }
+    // Declarar
+    $identificacion = $_POST['identificacion'];
+    $apellidos = $_POST['apellidos'];
+    $password = $_POST['password'];
+    $nombre = $_POST['nombres'];
+    $correo = $_POST['correo'];
+    $genero = $_POST['genero'];
+    $foto = $_POST['foto'];
+
+    // Verificar
+    if (empty($identificacion) || empty($apellidos) || empty($password) || empty($nombre) || empty($correo) || empty($genero)) {
+        echo "Error: Llenar";
         exit();
     }
 
+    $db = new conexion_m(); // Se crea la conexión a la base de datos
+    $sql = "SELECT * FROM usuarios WHERE identificacion = '$identificacion' LIMIT 1";
+    $result = $db->query($sql);
+    // Validar el usuario y contraseña con la base de datos
+    if ($result && mysqli_num_rows($result) > 0) {
+        echo "Error: Correo ya registrado";
+        exit();
+    }
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    /* 
+    INSERT INTO `usuarios` (`id`, `nombres`, `apellidos`, `identificacion`, `correo`, `contrasena`, `genero`, `foto`) VALUES (NULL, 'Juan José', 'Mazo Rodríguez', '1034992398', 'juanmazor@gmail.com', '$2y$10$dyHwbCfTmAUXJGfzF8lGqe87ao7RlRRFVV9oYXCogsAhK0Eu6ioGq', 'M', NULL);
+    */
+
+    // Insertar el nuevo usuario
+    $sql_insert = "INSERT INTO `usuarios` (id, nombres, apellidos, identificacion, correo, contrasena, genero, foto) VALUES (NULL, '$nombre', '$apellidos', '$identificacion', '$correo', '$hashed_password', '$genero', NULL)";
+    // Registra el usuario
+    $db->query($sql_insert);
+    // Busca el usuario recién registrado
+    $sql = "SELECT * FROM usuarios WHERE identificacion = '$identificacion' LIMIT 1";
+    $result = $db->query($sql);
+    $user = mysqli_fetch_assoc($result);
+    // Cierra la conexión
+    $db->close();
+    // Inicia sesión
+    $_SESSION['logged'] = True;
+    $_SESSION['user_name'] = $identificacion;
+    $_SESSION['user_nick'] = $nombre;
+    $_SESSION['user_id'] = $user['id'];
+    header("Location: ../inicio");
 } else {
     header("Location: ../");
     exit();

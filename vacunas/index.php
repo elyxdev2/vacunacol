@@ -1,5 +1,6 @@
 <?php
 require_once '../layouts/header.php';
+require_once '../utils/connect.php';
 if (!isset($_SESSION["logged"])) {
     header("Location: ../auth/login");
     exit();
@@ -16,33 +17,38 @@ if (!isset($_SESSION["logged"])) {
 
 
 <div class="rounded-xl bg-[#4C4276] w-[80%] m-auto h-fit text-center p-1 mt-[30px] xl:w-fit xl:pl-[10px] xl:pr-[10px]">
-    <h1 id="titulo" class="text-xl text-white font-medium">Registro de vacunas</h1>
+    <h1 id="titulo" class="text-xl text-white font-medium">Registro de vacunas 📃</h1>
 </div>
 <div class="text-center">
     <span class="text-zinc-500">Haga click en cualquier registro para verlo a detalle.</span>
 </div>
-<table class="m-auto mt-[10%] text-center table-fixed" id="tabla_vacunas">
+<table class="m-auto mt-[10%] table-fixed" id="tabla_vacunas">
     <thead class="bg-[#4C4276] text-white font-medium">
         <tr>
-            <th>Nombre de la vacuna</th>
+            <th>Nombre</th>
             <th>Fecha</th>
             <th>Lugar</th>
         </tr>
     </thead>
     <tbody class="bg-blue-300 text-black">
-        <!-- Aquí van las filas con los datos de las vacunas -->
-        <a href="inicio">
-            <tr class="hover:bg-blue-400 transition duration-200 hover:font-black" onclick="redirigir('prueba')">
-                <td>Covid 19</td>
-                <td>19/11/2021</td>
-                <td>Comfama Manrique</td>
-            </tr>
-        </a>
-        <tr>
-            <td>VIH/Sida</td>
-            <td>18/09/2024</td>
-            <td>Comfama Manrique</td>
-        </tr>
+        <?php
+        $db = new conexion_m();
+        $userid = $_SESSION['user_id'];
+        $sql = "SELECT * FROM vacunas WHERE id_usuario = $userid";
+        $result = $db->query($sql);
+        $db->close();
+        // Si hay coindicencias
+        if ($result && mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $vacunaid = $row['id'];
+                echo "<tr class='hover:bg-blue-400 transition duration-200 hover:font-black' onclick='redirigir(\"vacuna?id=$vacunaid\")'>";
+                echo "<td>". $row['nombre_vacuna']. "</td>";
+                echo "<td>". $row['fecha']. "</td>";
+                echo "<td>". $row['lugar']. "</td>";
+                echo "</tr>";
+            }    
+        }
+        ?>
     </tbody>
 </table>
 

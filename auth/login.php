@@ -11,18 +11,18 @@ if (isset($_SESSION["logged"])) {
                 <h1 id="titulo" class="text-xl text-white font-medium">Iniciar sesión</h1>
             </div>
             
-            <div id="login-frame" class="rounded-xl bg-[#4C4276] w-[80%] m-auto mt-[12vh] pt-[10%] h-[50%] text-center p-1 text-white">
+            <div id="login-frame" class="rounded-xl border-2 border-black bg-zinc-700 w-[80%] m-auto mt-[12vh] pt-[10%] h-[50%] text-center p-1 text-white">
             <form action="auth" method="post">
                     <input type="hidden" name="accion" value="login">
-                    <label for="username" class="font-medium text-xl pt-[15px]">Usuario</label>
+                    <label for="username" class="font-medium text-xl pt-[15px]">Usuario 👤</label>
                     <br>
-                    <input name="username" id="username" placeholder="Documento de identidad" type="text" class="p-2 rounded-xl mb-[10%] text-black">
+                    <input name="username" id="username" placeholder="Ej: 1234567890" type="text" class="border-2 border-black p-2 rounded-xl mb-[10%] text-black" required>
                     <br>
-                    <label for="password" class="font-medium text-xl pt-[15px]">Contraseña:</label>
+                    <label for="password" class="font-medium text-xl pt-[15px]">Contraseña 🔑</label>
                     <br>
-                    <input name="password" id="password" placeholder="Ingresa tu contraseña" type="password" class="p-2 rounded-xl mb-[10%] text-black">
+                    <input name="password" id="password" placeholder="Ingresa tu contrase{a" type="password" class="border-2 border-black p-2 rounded-xl mb-[10%] text-black" required>
                     <br>
-                    <input type="submit" class="bg-[#292929] p-2 rounded-2xl w-[50%] text-xl" value="Entrar">
+                    <input type="submit" class="bg-black p-2 rounded-2xl w-[50%] text-xl font-bold" value="Entrar">
                 </form>
             <?php 
             if (isset($_SESSION['error'])) {
@@ -31,7 +31,7 @@ if (isset($_SESSION["logged"])) {
             }
         ?>    
             </div>
-            <p class="text-center text-lg font-semibold">¿No tienes una cuenta? Regístrate <a href="register" class="text-purple-700 font-medium mt-[2px]">aquí</a></p>
+            <p class="text-center text-lg font-semibold">¿No tienes una cuenta? Regístrate <a href="register" class="text-purple-700 font-bold mt-[2px] underline">aquí</a></p>
 <?php
 require_once '../layouts/footer.php';
 ?>

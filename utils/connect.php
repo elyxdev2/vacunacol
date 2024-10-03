@@ -1,4 +1,5 @@
 <?php
+/*
 $possible_core_route_a = "../utils/core.php";
 $possible_core_route_b = "utils/core.php";
 $possible_core_route_b = "core.php";
@@ -16,7 +17,7 @@ if (file_exists($possible_core_route_a)) {
     }
   }
 }
-
+*/
 class conexion_m {
   // Credenciales de la base de datos
   private $d_host = "localhost";
