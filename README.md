@@ -2,12 +2,6 @@
 
 Proyecto de Media Técnica - Pascual Bravo
 
-### Integrantes
-
-- Yosman R.
-- Juan M.
-- Deiby B.
-
 > TO-DO
 
 - [x] Terminar vistas para móvil
