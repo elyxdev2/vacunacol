@@ -1,23 +1,4 @@
 <?php
-/*
-$possible_core_route_a = "../utils/core.php";
-$possible_core_route_b = "utils/core.php";
-$possible_core_route_b = "core.php";
-
-if (file_exists($possible_core_route_a)) {
-  require $possible_core_route_a;
-} else {
-  if (file_exists($possible_core_route_b)) {
-    require $possible_core_route_b;
-  } else {
-    if (file_exists($possible_core_route_c)) {
-        require $possible_core_route_b;
-    } else {
-        exit("Fatal error.");
-    }
-  }
-}
-*/
 class conexion_m {
   // Credenciales de la base de datos
   private $d_host = "localhost";
@@ -46,6 +27,3 @@ class conexion_m {
     mysqli_close($this->conexion);
   }
 }
-
-// Establecer conexión (old)
-// $conexion = new mysqli($d_host, $d_usuario, $d_pswd, $d_db);

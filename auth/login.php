@@ -11,18 +11,18 @@ if (isset($_SESSION["logged"])) {
                 <h1 id="titulo" class="text-xl text-white font-medium">Iniciar sesión</h1>
             </div>
             
-            <div id="login-frame" class="rounded-xl border-2 border-black bg-zinc-700 w-[80%] m-auto mt-[12vh] pt-[10%] h-[50%] text-center p-1 text-white">
+            <div id="login-frame" class="rounded-xl border-2 border-black bg-zinc-700 w-[80%] xl:w-[40%] m-auto mt-[12vh] xl:mt-[2%] pt-[10%] xl:p-1 xl:pt-[1%] h-[50%] text-center p-1 text-white">
             <form action="auth" method="post">
                     <input type="hidden" name="accion" value="login">
                     <label for="username" class="font-medium text-xl pt-[15px]">Usuario 👤</label>
                     <br>
-                    <input name="username" id="username" placeholder="Ej: 1234567890" type="text" class="border-2 border-black p-2 rounded-xl mb-[10%] text-black" required>
+                    <input name="username" id="username" placeholder="Ej: 1234567890" type="text" class="border-2 border-black p-2 rounded-xl mb-[10%] xl:mb-[1%] text-black" required>
                     <br>
                     <label for="password" class="font-medium text-xl pt-[15px]">Contraseña 🔑</label>
                     <br>
-                    <input name="password" id="password" placeholder="Ingresa tu contrase{a" type="password" class="border-2 border-black p-2 rounded-xl mb-[10%] text-black" required>
+                    <input name="password" id="password" placeholder="Ingresa tu contraseña" type="password" class="border-2 border-black p-2 rounded-xl mb-[10%] xl:mb-[1%] text-black" required>
                     <br>
-                    <input type="submit" class="bg-black p-2 rounded-2xl w-[50%] text-xl font-bold" value="Entrar">
+                    <input type="submit" class="bg-black p-2 rounded-2xl w-[50%] xl:w-[20%] text-xl font-bold" value="Entrar">
                 </form>
             <?php 
             if (isset($_SESSION['error'])) {

@@ -35,7 +35,7 @@ if (file_exists($possible_core_route_a)) {
         <a href="/"><span class="font-medium text-3xl"><span class="text-[#efff0c]">Vac</span><span class="text-[#240cff]">una</span><span class="text-[#ff0c0c]">Col 💉</span></span></a>
         <button id="menu-btn" aria-expanded="false" aria-controls="menu" class="bg-black rounded-2xl text-white font-medium p-2 ml-auto border-2 border-white">☰</button>
         </div>
-        <nav id="menu" class="fixed z-50 left-[45%] top-[7%] w-[50%] bg-black p-2 rounded-xl text-white text-center menu-hidden">
+        <nav id="menu" class="fixed z-50 left-[45%] xl:left-[76%] top-[7%] w-[50%] xl:w-[20%] bg-black p-2 rounded-xl text-white text-center menu-hidden">
           <ul class="text-black">
           <?php 
           $lg_in = false;
