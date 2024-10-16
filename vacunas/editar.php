@@ -62,7 +62,7 @@ $vacuna_lugar = $vacuna['lugar'];
     <h1 id="titulo" class="text-xl text-white font-medium">Editar vacuna: <?= $vacuna_nombre ?></h1>
 </div>
 
-<form class="font-medium mt-[50px] w-[100%] flex flex-wrap" method="POST" action="procesar">
+<form class="font-medium mt-[50px] xl:mt-[20px] w-[100%] flex flex-wrap" method="POST" action="procesar">
 <input type="hidden" name="vacuna_id" value="<?= $vacunaid ?>">
 <input type="hidden" name="accion" value="editar">
 <!-- Izq -->    
@@ -110,11 +110,11 @@ $vacuna_lugar = $vacuna['lugar'];
     </div>
 
     <div class="text-center m-auto mt-[15px] mb-[15px]">
-        <h1 class="text-2xl font-bold text-center">Opcional</h1>
+        <h1 class="text-2xl font-bold text-center xl:hidden">Opcional</h1>
     </div>
 
     <div class="m-auto text-center">
-        <label for="descripcion">Descripción / Anotaciones</label>
+        <label for="descripcion" class="xl:hidden">Descripción / Anotaciones</label>
         <textarea class="bg-[#D9D9D9] p-2 rounded-2xl" name="descripcion" id="descripcion" cols="30" rows="7" placeholder="Efectos secundarios, anotaciones entre otros..."><?= $vacuna_descripcion?></textarea>
     </div>
 

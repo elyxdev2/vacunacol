@@ -62,16 +62,16 @@ if (!isset($_SESSION["logged"])) {
     </div>
 
     <div class="text-center m-auto mt-[15px] mb-[15px]">
-        <h1 class="text-2xl font-bold text-center">Opcional</h1>
+        <h1 class="text-2xl font-bold text-center xl:hidden">Opcional</h1>
     </div>
 
     <div class="m-auto text-center">
-        <label for="descripcion">Descripción / Anotaciones</label>
+        <label for="descripcion" class="xl:hidden">Descripción / Anotaciones</label>
         <textarea class="bg-[#D9D9D9] p-2 rounded-2xl" name="descripcion" id="descripcion" cols="30" rows="7" placeholder="Efectos secundarios, anotaciones entre otros..."></textarea>
     </div>
 
     <br>
-    <div class="m-auto mt-[45px] w-[85%] text-center">
+    <div class="m-auto mt-[45px] xl:mt-[20px] w-[85%] text-center">
         <button class="p-2 rounded-2xl bg-gradient-to-r from-[#AD0000] to-[#470000] text-white m-auto text-center self-center font-semibold w-[45%]" onclick="redirigir('../inicio')">Descartar ❌</button>
         <button type="submit" class="p-2 rounded-2xl bg-gradient-to-r from-[#00AD5A] to-[#280047] text-white m-auto text-center self-center font-semibold w-[45%]">Guardar 💾</button>
     </div>

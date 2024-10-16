@@ -1,10 +1,10 @@
 <?php
 class conexion_m {
   // Credenciales de la base de datos
-  private $d_host = "localhost";
-  private $d_usuario = "root";
-  private $d_pswd = "";
-  private $d_db = "vacunacol";
+  private $d_host = "localhost"; // sql103.infinityfree.com
+  private $d_usuario = "root"; // if0_37514715
+  private $d_pswd = ""; // OlWhwaAknvpw4
+  private $d_db = "vacunacol"; // if0_37514715_vacunacol
   public $conexion;
 
   public function __construct() {

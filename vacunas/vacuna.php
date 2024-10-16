@@ -110,12 +110,12 @@ $vacuna_lugar = $vacuna['lugar'];
     </div>
 
     <div class="m-auto text-center">
-        <label for="descripcion">Descripción / Anotaciones</label>
+        <label for="descripcion" class="xl:hidden">Descripción / Anotaciones</label>
         <textarea disabled class="bg-[#D9D9D9] p-2 rounded-2xl" name="descripcion" id="descripcion" cols="30" rows="7"><?= $vacuna_descripcion ?></textarea>
     </div>
 
     <br>
-    <div class="m-auto mt-[45px] w-[85%] text-center">
+    <div class="m-auto mt-[45px] xl:mt-[20px] w-[85%] text-center">
         <button class="p-2 rounded-2xl bg-gradient-to-r from-[#AD0000] to-[#470000] text-white m-auto text-center self-center font-semibold w-[45%]" onclick="redirigir('index')">Regresar 🔳</button>
         <button class="p-2 rounded-2xl bg-gradient-to-r from-[#00AD5A] to-[#280047] text-white m-auto text-center self-center font-semibold w-[45%]" onclick="redirigir('editar?id=<?= $vacunaid ?>')">Editar ✍</button>
     </div>

@@ -53,7 +53,6 @@ if (file_exists($possible_core_route_a)) {
             <a href='$r_auth/login'><li class='rounded-2xl bg-gradient-to-r from-[#C100BA] to-[#16009F] mb-[16px] text-white font-bold p-1'>Iniciar sesión</li></a>
             <a href='$r_base'><li class='rounded-2xl bg-white font-bold mb-[8px] p-1'>Inicio</li></a>
             <a href='$r_base/tyc'><li class='rounded-2xl bg-white font-bold mb-[8px] p-1'>Términos y condiciones</li></a>
-            <a href='$r_base/faq'><li class='rounded-2xl bg-white font-bold mb-[8px] p-1'>Preguntas frecuentes</li></a>
             <a href='$r_base/sobre_nosotros'><li class='rounded-2xl bg-white font-bold p-1'>Sobre nosotros</li></a>
             ";
           } else { // Sesión iniciada

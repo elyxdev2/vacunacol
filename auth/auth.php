@@ -120,6 +120,22 @@ foto - foto
     $_SESSION['user_nick'] = $nombre;
     $_SESSION['user_id'] = $user['id'];
     header("Location: ../inicio");
+} elseif ($_POST['accion'] == "guardar") {
+    if ($_SESSION['logged'] != True) {
+        header("Location: login");
+        exit();
+    }
+    $nombres = $_POST['nombres'];
+    $apellidos = $_POST['apellidos'];
+    $correo = $_POST['correo'];
+    $genero = $_POST['genero'];
+    $userid = $_SESSION['user_id'];
+    $sql = "UPDATE `usuarios` SET `nombres` = '$nombres', `apellidos` = '$apellidos', `correo` = '$correo', `genero` = '$genero' WHERE `usuarios`.`id` = $userid";
+    $db = new conexion_m();
+    $db->query($sql);
+    $_SESSION['estado2'] = "¡Guardado!";
+    header("Location: ../yo");
+    exit();
 } else {
     header("Location: ../");
     exit();
